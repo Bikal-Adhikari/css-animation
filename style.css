@@ -19,11 +19,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: box 1s linear infinite;
+  animation: rotate 1s linear infinite reverse;
 }
 
-h1 {
-  animation: box 1s linear infinite;
+h2 {
+  animation: rotate 0.5s linear infinite;
 }
 
 .ball {
@@ -63,11 +63,17 @@ h1 {
   }
 }
 
-@keyframes box {
-  from {
+@keyframes rotate {
+  /* from {
     transform: rotate(0deg);
   }
   to {
+    transform: rotate(360deg);
+  } */
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
