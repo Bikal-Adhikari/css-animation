@@ -1,0 +1,73 @@
+.container {
+  background: blue;
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.parent {
+  background: black;
+  color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: box 1s linear infinite;
+}
+
+h1 {
+  animation: box 1s linear infinite;
+}
+
+.ball {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(white, red);
+  border-radius: 50%;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  /* animation: circle 3s linear infinite alternate-reverse; */
+  animation: circle 0.7s linear infinite;
+}
+
+@keyframes circle {
+  0% {
+    left: 40px;
+    top: 40px;
+  }
+  25% {
+    left: 70vw;
+    top: 40px;
+    background: yellow;
+  }
+  50% {
+    left: 70vw;
+    top: 70vh;
+  }
+  75% {
+    left: 40px;
+    top: 70vh;
+    background: purple;
+  }
+  100% {
+    left: 40px;
+    top: 40px;
+  }
+}
+
+@keyframes box {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
